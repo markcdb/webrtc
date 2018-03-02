@@ -90,13 +90,12 @@
   if (_metalView) {
     _metalView.delegate = self;
     [self addSubview:_metalView];
-    _metalView.contentMode = UIViewContentModeScaleAspectFit;
+    _metalView.contentMode = UIViewContentModeScaleAspectFill;
     _metalView.translatesAutoresizingMaskIntoConstraints = NO;
-    UILayoutGuide *margins = self.layoutMarginsGuide;
-    [_metalView.topAnchor constraintEqualToAnchor:margins.topAnchor].active = YES;
-    [_metalView.bottomAnchor constraintEqualToAnchor:margins.bottomAnchor].active = YES;
-    [_metalView.leftAnchor constraintEqualToAnchor:margins.leftAnchor].active = YES;
-    [_metalView.rightAnchor constraintEqualToAnchor:margins.rightAnchor].active = YES;
+    [_metalView.topAnchor constraintEqualToAnchor:self.topAnchor].active = YES;
+    [_metalView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor].active = YES;
+    [_metalView.leftAnchor constraintEqualToAnchor:self.leftAnchor].active = YES;
+    [_metalView.rightAnchor constraintEqualToAnchor:self.rightAnchor].active = YES;
   }
 }
 
